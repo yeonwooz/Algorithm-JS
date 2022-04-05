@@ -10,8 +10,8 @@ function solution(arr: number[]) {
   let sum = sumOfNine
   const heights = arr.slice()
 
-  for (let i = 0; i < arr.length; ++i) {
-    for (let j = 0; j < arr.length; ++j) {
+  for (let i = 0; i < arr.length - 1; ++i) {
+    for (let j = i + 1; j < arr.length; ++j) {
       if (i !== j && sum - (arr[i] + arr[j]) === 100) {
         heights.splice(j, 1)
         heights.splice(i, 1)
