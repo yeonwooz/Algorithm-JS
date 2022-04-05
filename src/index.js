@@ -1,8 +1,9 @@
-import { isTriangle } from './warmup/isTriangle.js'
-import { min } from './warmup/min.ts'
-import { minAmongMany } from './warmup/minAmongMany.ts'
-import { sum } from './warmup/sum.ts'
-import { sevenDwarfs } from './warmup/sevenDwarfs.ts'
+import { isTriangle } from './warmup/isTriangle'
+import { min } from './warmup/min'
+import { minAmongMany } from './warmup/minAmongMany'
+import { sum } from './warmup/sum'
+import { sevenDwarfs } from './warmup/sevenDwarfs'
+import { palindrome } from './strings/palindrome'
 
 export default {
   min,
@@ -10,4 +11,5 @@ export default {
   minAmongMany,
   sum,
   sevenDwarfs,
+  palindrome,
 }
