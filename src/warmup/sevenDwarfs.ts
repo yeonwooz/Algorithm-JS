@@ -13,8 +13,8 @@ function solution(arr: number[]) {
   for (let i = 0; i < arr.length; ++i) {
     for (let j = 0; j < arr.length; ++j) {
       if (i !== j && sum - (arr[i] + arr[j]) === 100) {
+        heights.splice(j, 1)
         heights.splice(i, 1)
-        heights.splice(j - 1, 1)
 
         return heights
       }
