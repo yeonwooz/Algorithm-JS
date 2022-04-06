@@ -9,11 +9,9 @@ function solution(str: string) {
   https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substr
   */
   if (len % 2 === 0) {
-    // 4
     return str.substr(len / 2 - 1, 2)
   } else {
-    // 5
-    return str.substr(len / 2, 1)
+    return str.substr(Math.floor(len / 2), 1)
   }
 }
 

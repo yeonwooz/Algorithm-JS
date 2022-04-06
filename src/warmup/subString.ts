@@ -5,11 +5,9 @@ function solution(str: string) {
   }
 
   if (len % 2 === 0) {
-    // 4
     return str.substring(len / 2 - 1, len / 2 + 1)
   } else {
-    // 5
-    return str.substring(len / 2, len / 2 + 1)
+    return str.substring(Math.floor(len / 2), len / 2 + 1)
   }
 }
 
