@@ -22,4 +22,6 @@ import solution from './src/index.js'
 // console.log(solution.palindrome('kayak'))
 // console.log(solution.palindrome('reviver'))
 
-console.log(solution.numberComparison(6, [7, 3, 9, 5, 6, 12]))
+// console.log(solution.numberComparison(6, [7, 3, 9, 5, 6, 12]))
+
+console.log(solution.sumOfDigits(7, [128, 460, 603, 40, 521, 137, 123]))

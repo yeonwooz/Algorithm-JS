@@ -7,6 +7,7 @@ import { sum } from './warmup/sum'
 import { sevenDwarfs } from './warmup/sevenDwarfs'
 import { palindrome } from './strings/palindrome'
 import { numberComparison } from './searching/numberComparison'
+import { sumOfDigits } from './bruteForce/sumOfDigits'
 
 export default {
   min,
@@ -18,4 +19,5 @@ export default {
   sevenDwarfs,
   palindrome,
   numberComparison,
+  sumOfDigits,
 }
