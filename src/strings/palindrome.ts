@@ -12,15 +12,12 @@ function solution(str: string): string {
     return 'YES'
   }
 
-  for (let i = 0; i < str.length; ++i) {
-    if (str[i] === str[str.length - (i + 1)]) {
-      const trimmed = str.slice(i + 1, str.length - (i + 1))
-      if (trimmed.length === 0) {
-        return 'YES'
-      }
-      return solution(trimmed)
+  if (str[0] === str[str.length - 1]) {
+    const trimmed = str.slice(1, str.length - 1)
+    if (trimmed.length === 0) {
+      return 'YES'
     }
-    return 'NO'
+    return solution(trimmed)
   }
 
   return 'NO'
@@ -35,17 +32,14 @@ function solution2(str: string): string {
     return 'YES'
   }
 
-  for (let i = 0; i < lowers.length; ++i) {
-    if (lowers[i] === lowers[lowers.length - (i + 1)]) {
-      const trimmed = lowers.slice(i + 1, lowers.length - (i + 1))
-      if (trimmed.length === 0) {
-        return 'YES'
-      }
-      return solution(trimmed)
+  if (lowers[0] === lowers[lowers.length - 1]) {
+    const trimmed = lowers.slice(1, lowers.length - 1)
+    if (trimmed.length === 0) {
+      return 'YES'
     }
-    return 'NO'
+    return solution(trimmed)
   }
 
   return 'NO'
 }
-export { solution2 as palindrome }
+export { solution as palindrome }
