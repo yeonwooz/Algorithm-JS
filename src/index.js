@@ -6,6 +6,7 @@ import { subStr } from './warmup/subStr'
 import { sum } from './warmup/sum'
 import { sevenDwarfs } from './warmup/sevenDwarfs'
 import { palindrome } from './strings/palindrome'
+import { numberComparison } from './searching/numberComparison'
 
 export default {
   min,
@@ -16,4 +17,5 @@ export default {
   sum,
   sevenDwarfs,
   palindrome,
+  numberComparison,
 }
