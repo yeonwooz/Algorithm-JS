@@ -44,7 +44,7 @@ function solution2(count: number, arr: number[]): number[] {
     }
 
     let i = 2
-    while (i < newNum) {
+    while (i < Math.floor(newNum / 2)) {    // 약수쌍이므로 나머지 반은 안 돌아도 됨
       if (newNum % i == 0) {
         isPrime = false
         break
