@@ -28,4 +28,36 @@ function solution(count: number, arr: number[]): number[] {
   return primes
 }
 
-export { solution as getPrimeNumbers }
+// string 변환없이 자릿수를 이용하여 숫자를 뒤집는 방법
+function solution2(count: number, arr: number[]): number[] {
+  const primes: number[] = []
+
+  for (let num of arr) {
+    let isPrime = true
+
+    let newNum = 0 // -> 2
+    while (num) {
+      // num : 62   -> 6
+      const res = num % 10 // res : 2   -> 6
+      newNum = newNum * 10 + res // newNum : 2  ->  26
+      num = Math.floor(num / 10) // num : 6 -> 0
+    }
+
+    let i = 2
+    while (i < newNum) {
+      if (newNum % i == 0) {
+        isPrime = false
+        break
+      }
+      ++i
+    }
+
+    if (newNum > 1 && isPrime) {
+      primes.push(newNum)
+    }
+  }
+
+  return primes
+}
+
+export { solution2 as getPrimeNumbers }
