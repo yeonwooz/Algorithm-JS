@@ -8,7 +8,7 @@ import { sevenDwarfs } from './warmup/sevenDwarfs'
 import { palindrome } from './strings/palindrome'
 import { numberComparison } from './searching/numberComparison'
 import { sumOfDigits } from './bruteForce/sumOfDigits'
-
+import { getPrimeNumbers } from './bruteForce/primeNumber'
 export default {
   min,
   isTriangle,
@@ -20,4 +20,5 @@ export default {
   palindrome,
   numberComparison,
   sumOfDigits,
+  getPrimeNumbers,
 }
