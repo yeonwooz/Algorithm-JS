@@ -9,6 +9,8 @@ import { palindrome } from './strings/palindrome'
 import { numberComparison } from './searching/numberComparison'
 import { sumOfDigits } from './bruteForce/sumOfDigits'
 import { getPrimeNumbers } from './bruteForce/primeNumber'
+import { concatArrays } from './twoPointerAlgorithm/concatArrays'
+
 export default {
   min,
   isTriangle,
@@ -21,4 +23,5 @@ export default {
   numberComparison,
   sumOfDigits,
   getPrimeNumbers,
+  concatArrays,
 }

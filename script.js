@@ -26,6 +26,8 @@ import solution from './src/index.js'
 
 // console.log(solution.sumOfDigits(7, [128, 460, 603, 40, 521, 137, 123]))
 
-console.log(
-  solution.getPrimeNumbers(9, [32, 55, 62, 20, 250, 370, 200, 30, 100])
-)
+// console.log(
+//   solution.getPrimeNumbers(9, [32, 55, 62, 20, 250, 370, 200, 30, 100])
+// )
+
+console.log(solution.concatArrays([1, 3, 5], [2, 3, 6, 7, 9]))
