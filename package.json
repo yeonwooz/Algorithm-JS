@@ -4,7 +4,7 @@
   "private": true,
   "main": "script.js",
   "scripts": {
-    "test": "jest --verbose ./tests",
+    "t": "jest --verbose ./tests",
     "w": "tsc -watch",
     "s": "ts-node script"
   },
