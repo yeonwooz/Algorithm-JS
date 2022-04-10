@@ -10,60 +10,27 @@ function solution1(arr1: number[], arr2: number[]): number[] {
 
 // without sort method  -> tc: O(n+m)
 function solution2(arr1: number[], arr2: number[]): number[] {
-  let merged: number[] = []
-
+  const merged: number[] = []
+  const n = arr1.length
+  const m = arr2.length
+  let p1 = 0
+  let p2 = 0
   // Do not visit the index which has already been pushed into the 'merged' array
-  //   for (let i = 0; i < arr1.length; ++i) {
-  //     for (let j = 0; j < arr2.length; ++j) {
-  //       if (arr1[i] <= arr2[j]) {
-  //         merged.push(arr1[i])
-  //         merged.push(arr2[j])
-  //         break
-  //       }
-  //     }
-  //   }
 
-  if (arr1[0] < arr2[0]) {
-    let i = 0
-    while (i < arr1.length) {
-      let j = 0
-      while (j < arr2.length) {
-        if (arr1[i] <= arr2[j]) {
-          if (i === arr1.length - 1) {
-            merged.push(arr1[i])
-            merged = merged.concat(arr2.slice(j))
-          } else {
-            merged.push(arr1[i])
-            merged.push(arr2[j])
-          }
-
-          break
-        }
-
-        ++j
-      }
-      ++i
+  while (p1 < n && p2 < m) {
+    if (arr1[p1] <= arr2[p2]) {
+      merged.push(arr1[p1++])
+    } else {
+      merged.push(arr2[p2++])
     }
-  } else {
-    //   if (arr1[0] >= arr2[0])
-    let i = 0
-    while (i < arr2.length) {
-      let j = 0
-      while (j < arr1.length) {
-        if (arr2[i] <= arr1[j]) {
-          if (i === arr2.length - 1) {
-            merged.push(arr2[i])
-            merged = merged.concat(arr1.slice(j))
-          } else {
-            merged.push(arr2[i])
-            merged.push(arr1[j])
-          }
-        }
+  }
 
-        ++j
-      }
-      ++i
-    }
+  while (p1 < n) {
+    merged.push(arr1[p1++])
+  }
+
+  while (p2 < m) {
+    merged.push(arr2[p2++])
   }
 
   return merged
