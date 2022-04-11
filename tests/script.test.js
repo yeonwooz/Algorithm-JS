@@ -23,3 +23,9 @@ test('concatArrays 을 테스트할 수 있다', () => {
   const merged = solution.concatArrays(arr1, arr2)
   expect(merged).toEqual([2, 3, 3, 6, 7, 8, 9, 10])
 })
+
+test('vote 를 테스트할 수 있다.', () => {
+  const papers = 'BACBACACCBDEDE'
+  const candidates = ['A', 'B', 'C', 'D', 'E']
+  expect(solution.vote(papers, candidates)).toEqual('C')
+})

@@ -10,6 +10,7 @@ import { numberComparison } from './searching/numberComparison'
 import { sumOfDigits } from './bruteForce/sumOfDigits'
 import { getPrimeNumbers } from './bruteForce/primeNumber'
 import { concatArrays } from './twoPointerAlgorithm/concatArrays'
+import { vote } from './hash/vote'
 
 export default {
   min,
@@ -24,4 +25,5 @@ export default {
   sumOfDigits,
   getPrimeNumbers,
   concatArrays,
+  vote,
 }
