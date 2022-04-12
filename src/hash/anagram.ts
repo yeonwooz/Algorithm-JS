@@ -2,7 +2,9 @@
 Q. Check whether two strings are anagram of each other.
 */
 
-function solution(str1: string, str2: string) {
+
+
+function solution(str1: string, str2: string): string {
   if (str1.length !== str2.length) {
     return 'NO'
   }

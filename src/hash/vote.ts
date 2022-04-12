@@ -6,7 +6,7 @@ type Result = {
   [key: string]: number
 }
 
-function solution1(papers: string, candidates: string[]) {
+function solution1(papers: string, candidates: string[]): string {
   const results: Result = {}
 
   for (let candidate of candidates) {

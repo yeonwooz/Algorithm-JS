@@ -12,6 +12,7 @@ import { getPrimeNumbers } from './bruteForce/primeNumber'
 import { concatArrays } from './twoPointerAlgorithm/concatArrays'
 import { vote } from './hash/vote'
 import { checkAnagram } from './hash/anagram'
+import { getMaxRevenue } from './slidingWindow/maxRevenueInRow'
 
 export default {
   min,
@@ -28,4 +29,5 @@ export default {
   concatArrays,
   vote,
   checkAnagram,
+  getMaxRevenue,
 }

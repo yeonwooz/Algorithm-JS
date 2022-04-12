@@ -34,3 +34,9 @@ test('checkAnagram 을 테스트할 수 있다.', () => {
   expect(solution.checkAnagram('AbaAeCe', 'baeeACA')).toEqual('YES')
   expect(solution.checkAnagram('abaCC', 'Caaab')).toEqual('NO')
 })
+
+test('getMaxRevenue 를 테스트할 수 있다.', () => {
+  expect(
+    solution.getMaxRevenue(10, 3, [12, 15, 11, 20, 25, 10, 20, 19, 13, 15])
+  ).toEqual(56)
+})
