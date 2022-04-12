@@ -31,13 +31,13 @@ function solution1(papers: string, candidates: string[]) {
 function solution2(chosenCandidates: string, candidates: string[]): string {
   const results = new Map<string, number>()
 
-  for (let candidate of candidates) {
-    results.set(candidate, 0)
-  }
-
   for (let chosenCandidate of chosenCandidates) {
-    const prevVote = results.get(chosenCandidate)
-    results.set(chosenCandidate, prevVote + 1)
+    if (!results.has(chosenCandidate)) {
+      results.set(chosenCandidate, 0)
+    } else {
+      const prevVote = results.get(chosenCandidate)
+      results.set(chosenCandidate, prevVote + 1)
+    }
   }
 
   let elected = candidates[0]
