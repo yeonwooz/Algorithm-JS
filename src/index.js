@@ -11,6 +11,7 @@ import { sumOfDigits } from './bruteForce/sumOfDigits'
 import { getPrimeNumbers } from './bruteForce/primeNumber'
 import { concatArrays } from './twoPointerAlgorithm/concatArrays'
 import { vote } from './hash/vote'
+import { checkAnagram } from './hash/anagram'
 
 export default {
   min,
@@ -26,4 +27,5 @@ export default {
   getPrimeNumbers,
   concatArrays,
   vote,
+  checkAnagram,
 }

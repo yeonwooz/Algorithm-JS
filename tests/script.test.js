@@ -29,3 +29,8 @@ test('vote 를 테스트할 수 있다.', () => {
   const candidates = ['A', 'B', 'C', 'D', 'E']
   expect(solution.vote(papers, candidates)).toEqual('C')
 })
+
+test('checkAnagram 을 테스트할 수 있다.', () => {
+  expect(solution.checkAnagram('AbaAeCe', 'baeeACA')).toEqual('YES')
+  expect(solution.checkAnagram('abaCC', 'Caaab')).toEqual('NO')
+})
