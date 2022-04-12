@@ -40,10 +40,13 @@ function solution2(chosenCandidates: string, candidates: string[]): string {
     }
   }
 
-  let elected = candidates[0]
-  for (let result of results) {
-    if (result[1] > results.get(elected)) {
-      elected = result[0]
+  let elected
+
+  let max = Number.MIN_SAFE_INTEGER
+  for (let [key, value] of results) {
+    if (value > max) {
+      max = value
+      elected = key
     }
   }
 
