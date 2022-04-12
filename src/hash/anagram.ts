@@ -7,29 +7,21 @@ function solution(str1: string, str2: string) {
     return 'NO'
   }
 
-  const map1 = new Map<string, number>()
-  const map2 = new Map<string, number>()
+  const charMap = new Map<string, number>()
 
   for (let char of str1) {
-    if (!map1.has(char)) {
-      map1.set(char, 0)
+    if (!charMap.has(char)) {
+      charMap.set(char, 1)
     } else {
-      map1.set(char, map1.get(char) + 1)
+      charMap.set(char, charMap.get(char) + 1)
     }
   }
 
   for (let char of str2) {
-    if (!map2.has(char)) {
-      map2.set(char, 0)
-    } else {
-      map2.set(char, map2.get(char) + 1)
-    }
-  }
-
-  for (let [char, charCount] of map1) {
-    if (map2.get(char) !== charCount) {
+    if (!charMap.has(char) || charMap.get(char) === 0) {
       return 'NO'
     }
+    charMap.set(char, charMap.get(char) - 1)
   }
 
   return 'YES'

@@ -33,7 +33,7 @@ function solution2(chosenCandidates: string, candidates: string[]): string {
 
   for (let chosenCandidate of chosenCandidates) {
     if (!results.has(chosenCandidate)) {
-      results.set(chosenCandidate, 0)
+      results.set(chosenCandidate, 1)
     } else {
       const prevVote = results.get(chosenCandidate)
       results.set(chosenCandidate, prevVote + 1)
