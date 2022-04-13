@@ -50,3 +50,8 @@ test('checkParenthesisPairs (괄호쌍 체크) 를 테스트할 수 있다.', ()
   expect(solution.checkParenthesisPairs('()()')).toBe('YES')
   expect(solution.checkParenthesisPairs('())(()')).toBe('NO')
 })
+
+
+test('getRemovedDollsCount 를 테스트할 수 있다.' , ()=>{
+  expect(solution.getRemovedDollsCount([[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]],[1,5,3,5,1,2,1,4])).toBe(4)
+})

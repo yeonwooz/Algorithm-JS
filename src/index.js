@@ -14,6 +14,7 @@ import { vote } from './hash/vote'
 import { checkAnagram } from './hash/anagram'
 import { getMaxRevenue } from './slidingWindow/maxRevenueInRow'
 import { checkParenthesisPairs } from './stack/parenthesisPair'
+import { getRemovedDollsCount } from './stack/craneGame'
 
 export default {
   min,
@@ -32,4 +33,5 @@ export default {
   checkAnagram,
   getMaxRevenue,
   checkParenthesisPairs,
+  getRemovedDollsCount
 }
