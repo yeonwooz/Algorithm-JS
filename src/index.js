@@ -13,6 +13,7 @@ import { concatArrays } from './twoPointerAlgorithm/concatArrays'
 import { vote } from './hash/vote'
 import { checkAnagram } from './hash/anagram'
 import { getMaxRevenue } from './slidingWindow/maxRevenueInRow'
+import { checkParenthesisPairs } from './stack/parenthesisPair'
 
 export default {
   min,
@@ -30,4 +31,5 @@ export default {
   vote,
   checkAnagram,
   getMaxRevenue,
+  checkParenthesisPairs,
 }

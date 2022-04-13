@@ -40,3 +40,13 @@ test('getMaxRevenue 를 테스트할 수 있다.', () => {
     solution.getMaxRevenue(10, 3, [12, 15, 11, 20, 25, 10, 20, 19, 13, 15])
   ).toEqual(56)
 })
+
+test('checkParenthesisPairs (괄호쌍 체크) 를 테스트할 수 있다.', () => {
+  expect(solution.checkParenthesisPairs('(()(()))(()')).toBe('NO')
+  expect(solution.checkParenthesisPairs('((((((')).toBe('NO')
+  expect(solution.checkParenthesisPairs(')))))')).toBe('NO')
+  expect(solution.checkParenthesisPairs('(()')).toBe('NO')
+  expect(solution.checkParenthesisPairs('(())')).toBe('YES')
+  expect(solution.checkParenthesisPairs('()()')).toBe('YES')
+  expect(solution.checkParenthesisPairs('())(()')).toBe('NO')
+})
