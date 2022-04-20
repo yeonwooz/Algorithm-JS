@@ -16,6 +16,7 @@ import { getMaxRevenue } from './slidingWindow/maxRevenueInRow'
 import { checkParenthesisPairs } from './stack/parenthesisPair'
 import { getRemovedDollsCount } from './stack/craneGame'
 import { selectionSort } from './sorting/selectionSort'
+import { bubbleSort } from './sorting/bubbleSort'
 
 export default {
   min,
@@ -36,4 +37,5 @@ export default {
   checkParenthesisPairs,
   getRemovedDollsCount,
   selectionSort,
+  bubbleSort,
 }

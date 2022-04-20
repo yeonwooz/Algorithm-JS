@@ -1,4 +1,5 @@
 /*
+<Selection Sorting>
 Q. Sort the array given as a parameter in ascending order.
 (The elements are all natural numbers)
 */

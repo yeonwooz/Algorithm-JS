@@ -71,3 +71,9 @@ test('selectionSort 를 테스트할 수 있다.', () => {
     5, 7, 11, 13, 15, 23,
   ])
 })
+
+test('bubbleSort 를 테스트할 수 있다.', () => {
+  const arr = [13, 5, 11, 7, 23, 15]
+  solution.bubbleSort(arr)
+  expect(arr).toEqual([5, 7, 11, 13, 15, 23])
+})
