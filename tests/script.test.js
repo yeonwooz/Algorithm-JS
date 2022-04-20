@@ -77,3 +77,9 @@ test('bubbleSort 를 테스트할 수 있다.', () => {
   solution.bubbleSort(arr)
   expect(arr).toEqual([5, 7, 11, 13, 15, 23])
 })
+
+test('insertingSort 를 테스트할 수 있다.', () => {
+  expect(solution.insertingSort([13, 5, 11, 7, 23, 15])).toEqual([
+    5, 7, 11, 13, 15, 23,
+  ])
+})

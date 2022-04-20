@@ -17,6 +17,7 @@ import { checkParenthesisPairs } from './stack/parenthesisPair'
 import { getRemovedDollsCount } from './stack/craneGame'
 import { selectionSort } from './sorting/selectionSort'
 import { bubbleSort } from './sorting/bubbleSort'
+import { insertingSort } from './sorting/insertingSort'
 
 export default {
   min,
@@ -38,4 +39,5 @@ export default {
   getRemovedDollsCount,
   selectionSort,
   bubbleSort,
+  insertingSort,
 }
