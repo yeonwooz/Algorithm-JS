@@ -2,7 +2,7 @@
 2021 카카오 채용연계형 인턴십 문제 - 숫자 문자열과 영단어
 */
 
-function solution(s: string) {
+function solution(s) {
   let arr = s.split('')
   const group1 = ['z', 'o', 'e', 'n']
   const group2 = ['t', 'f', 's']
@@ -16,16 +16,28 @@ function solution(s: string) {
     n: { length: 4, n: 9 },
   }
 
-  for (let i = 0; i < arr.length; ++i) {
+  let answerStr = ''
+  let i = 0
+  while (i < arr.length) {
     if (group1.includes(arr[i])) {
       const prop = letterProps[arr[i]]
-      prop && arr.splice(i, prop['length'], prop['n'])
+      if (prop) {
+        answerStr += prop['n']
+        i += prop['length']
+      }
     } else if (group2.includes(arr[i])) {
       const prop = letterProps[arr[i]][arr[i + 1]]
-      prop && arr.splice(i, prop['length'], prop['n'])
+      if (prop) {
+        answerStr += prop['n']
+        i += prop['length']
+      }
+    } else {
+      answerStr += arr[i]
+      i++
     }
   }
 
-  return parseInt(arr.join(''))
+  return parseInt(answerStr)
 }
+
 export { solution as convertMixedCharactersIntoNumbers }
