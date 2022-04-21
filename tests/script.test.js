@@ -106,9 +106,3 @@ test('getCachedCities 를 테스트할 수  있다.', () => {
     ])
   ).toBe(50)
 })
-
-test('binarySearchSort 를 테스트할 수 있다.', () => {
-  expect(
-    solution.binarySearchSort(9, [120, 125, 152, 130, 135, 135, 143, 127, 160])
-  ).toEqual([3, 8])
-})
