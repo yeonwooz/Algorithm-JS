@@ -7,7 +7,7 @@
 */
 
 // (3 <= cacheSize <= 10) , (5 <= tasks.length <= 1000)
-function solution(cacheSize: number, tasks: number[]) {
+function solution(cacheSize: number, tasks: number[]): number[] {
   // definedProperty : can lock the obect's property  (no errors though)
   const cacheArray: number[] = [] // cannot lock if it's defined with let keyword
   Object.defineProperty(cacheArray, 'length', {

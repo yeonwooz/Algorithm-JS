@@ -89,3 +89,20 @@ test('getCachedItems 를 테스트할 수  있다.', () => {
     7, 5, 3, 2, 6,
   ])
 })
+
+test('getCachedCities 를 테스트할 수  있다.', () => {
+  expect(
+    solution.getCachedCities(3, [
+      'Jeju',
+      'Pangyo',
+      'Seoul',
+      'NewYork',
+      'LA',
+      'Jeju',
+      'Pangyo',
+      'Seoul',
+      'NewYork',
+      'LA',
+    ])
+  ).toBe(50)
+})
