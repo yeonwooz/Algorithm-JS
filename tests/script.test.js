@@ -83,3 +83,9 @@ test('insertingSort 를 테스트할 수 있다.', () => {
     5, 7, 11, 13, 15, 23,
   ])
 })
+
+test('getCachedItems 를 테스트할 수  있다.', () => {
+  expect(solution.getCachedItems(5, [1, 2, 3, 2, 6, 2, 3, 5, 7])).toEqual([
+    7, 5, 3, 2, 6,
+  ])
+})

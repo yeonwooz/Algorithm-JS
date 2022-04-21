@@ -18,6 +18,7 @@ import { getRemovedDollsCount } from './stack/craneGame'
 import { selectionSort } from './sorting/selectionSort'
 import { bubbleSort } from './sorting/bubbleSort'
 import { insertingSort } from './sorting/insertingSort'
+import { getCachedItems } from './sorting/lru'
 
 export default {
   min,
@@ -40,4 +41,5 @@ export default {
   selectionSort,
   bubbleSort,
   insertingSort,
+  getCachedItems,
 }
