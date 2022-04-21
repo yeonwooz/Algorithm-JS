@@ -20,6 +20,7 @@ import { bubbleSort } from './sorting/bubbleSort'
 import { insertingSort } from './sorting/insertingSort'
 import { getCachedItems } from './sorting/lru'
 import { getCachedCities } from './sorting/lru2'
+import { binarySearchSort } from './sorting/binarySearchSort'
 
 export default {
   min,
@@ -44,4 +45,5 @@ export default {
   insertingSort,
   getCachedItems,
   getCachedCities,
+  binarySearchSort,
 }
