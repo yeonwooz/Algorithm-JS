@@ -21,6 +21,7 @@ import { insertingSort } from './sorting/insertingSort'
 import { getCachedItems } from './sorting/lru'
 import { getCachedCities } from './sorting/lru2'
 import { binarySearch } from './searching/binarySearch'
+import { decisionTree } from './sorting/decisionTree'
 
 export default {
   min,
@@ -46,4 +47,5 @@ export default {
   getCachedItems,
   getCachedCities,
   binarySearch,
+  decisionTree,
 }
