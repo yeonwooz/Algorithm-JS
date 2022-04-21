@@ -106,3 +106,7 @@ test('getCachedCities 를 테스트할 수  있다.', () => {
     ])
   ).toBe(50)
 })
+
+test('binarySearch 를 테스트할 수 있다.', () => {
+  expect(solution.binarySearch(32, [23, 87, 65, 12, 57, 32, 99, 81])).toBe(3)
+})
