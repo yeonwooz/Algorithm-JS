@@ -8,4 +8,19 @@ function solution(n: number): number | string {
     return parseInt(c)
   }
 }
-export { solution as binaryRecursion }
+
+function solution2(n: number): number | string {
+  let answer = ''
+  function DFS(n: number): number {
+    if (n === 0) {
+      return
+    } else {
+      DFS(Math.floor(n / 2))
+      answer += String(n % 2)
+    }
+  }
+
+  DFS(n)
+  return parseInt(answer)
+}
+export { solution2 as binaryRecursion }
