@@ -131,3 +131,9 @@ test('recursion1 를 테스트할 수 있다.', () => {
 test('recursion2 를 테스트할 수 있다.', () => {
   expect(solution.recursion2(3, [])).toEqual([1, 2, 3])
 })
+
+test('binaryRecursion 를 테스트할 수 있다.', () => {
+  expect(solution.binaryRecursion(10)).toBe(1010)
+  expect(solution.binaryRecursion(11)).toBe(1011)
+
+})
