@@ -1,3 +1,4 @@
+import { textChangeRangeIsUnchanged } from 'typescript'
 import solution from '../src/index'
 
 test('concatArrays 을 테스트할 수 있다', () => {
@@ -117,4 +118,8 @@ test('decisionTree 를 테스트할 수 있다.', () => {
 
 test('decisionTree2 를 테스트할 수 있다.', () => {
   expect(solution.decisionTree2(3, [1, 2, 8, 4, 9])).toBe(3)
+})
+
+test('recursion1 를 테스트할 수 있다.', () => {
+  expect(solution.recursion1(3)).toBe([1,2,3])
 })
