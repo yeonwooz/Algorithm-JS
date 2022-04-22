@@ -1,6 +1,5 @@
 function solution(n: number): void {
-  if (n === 1) {
-    console.log(n)
+  if (n === 0) {
     return
   }
 
@@ -27,4 +26,6 @@ function solution3(n: number, arr: number[]): number[] {
 
   return solution3(n - 1, [n].concat(arr))
 }
-export { solution2 as recursion1 }
+export { solution as recursion1 }
+
+export { solution2 as recursion2 }

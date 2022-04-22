@@ -23,7 +23,7 @@ import { getCachedCities } from './sorting/lru2'
 import { binarySearch } from './searching/binarySearch'
 import { decisionTree } from './sorting/decisionTree'
 import { decisionTree2 } from './sorting/decisionTree2'
-import { recursion1 } from './recursion/recursion1'
+import { recursion1, recursion2 } from './recursion/consoleRecursion'
 export default {
   min,
   isTriangle,
@@ -51,4 +51,5 @@ export default {
   decisionTree,
   decisionTree2,
   recursion1,
+  recursion2,
 }
