@@ -121,5 +121,5 @@ test('decisionTree2 를 테스트할 수 있다.', () => {
 })
 
 test('recursion1 를 테스트할 수 있다.', () => {
-  expect(solution.recursion1(3)).toBe([1,2,3])
+  expect(solution.recursion1(3, [])).toEqual([1, 2, 3])
 })
