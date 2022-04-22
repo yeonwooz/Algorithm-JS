@@ -114,3 +114,7 @@ test('binarySearch 를 테스트할 수 있다.', () => {
 test('decisionTree 를 테스트할 수 있다.', () => {
   expect(solution.decisionTree(9, 3, [1, 2, 3, 4, 5, 6, 7, 8, 9])).toBe(17)
 })
+
+test('decisionTree2 를 테스트할 수 있다.', () => {
+  expect(solution.decisionTree2(3, [1, 2, 8, 4, 9])).toBe(3)
+})
