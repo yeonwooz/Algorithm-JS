@@ -13,13 +13,11 @@ function solution(n: number): number {
     */
 
   if (n <= 2) {
-    return 1
+    return n
   }
+
   if (n === 3) {
     return 3
-  }
-  if (n === 4) {
-    return 5
   }
 
   return solution(n - 1) + solution(n - 2)
