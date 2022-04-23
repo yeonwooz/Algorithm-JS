@@ -16,10 +16,6 @@ function solution(n: number): number {
     return n
   }
 
-  if (n === 3) {
-    return 3
-  }
-
   return solution(n - 1) + solution(n - 2)
 }
 
