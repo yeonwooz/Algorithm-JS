@@ -25,7 +25,7 @@ import { decisionTree } from './sorting/decisionTree'
 import { decisionTree2 } from './sorting/decisionTree2'
 import { recursion1, recursion2 } from './recursion/consoleRecursion'
 import { binaryRecursion } from './recursion/binaryRecursion'
-
+import { stairs } from './dynamic/stairs'
 export default {
   min,
   isTriangle,
@@ -55,4 +55,5 @@ export default {
   recursion1,
   recursion2,
   binaryRecursion,
+  stairs,
 }
