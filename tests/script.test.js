@@ -139,5 +139,5 @@ test('binaryRecursion 를 테스트할 수 있다.', () => {
 
 test('stairs 를 테스할 수  있다.', () => {
   expect(solution.stairs(4)).toBe(5)
-  // expect(solution.stairs(7)).toBe(21)
+  expect(solution.stairs(7)).toBe(21)
 })
