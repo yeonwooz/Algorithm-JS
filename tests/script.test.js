@@ -143,5 +143,6 @@ test('stairs 를 테스할 수  있다.', () => {
 })
 
 test('stoneBridge 를 테스할 수  있다.', () => {
-  expect(solution.stoneBridge(7)).toBe(34)
+  expect(solution.stoneBridge(7)).toBe(81)
 })
+// https://www.inflearn.com/questions/518253 -> 질문중

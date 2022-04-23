@@ -22,3 +22,5 @@ function solution(n: number): number {
 }
 
 export { solution as stoneBridge }
+
+// https://www.inflearn.com/questions/518253 -> 질문중
