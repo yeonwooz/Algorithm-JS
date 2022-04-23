@@ -19,4 +19,17 @@ function solution(n: number): number {
   return solution(n - 1) + solution(n - 2)
 }
 
-export { solution as stairs }
+function solution2(n: number): number {
+  let dy: number[] = Array.from({ length: n + 1 })
+  dy.fill(0)
+  dy[0] = 1
+  dy[1] = 2
+  for (let i = 2; i < n + 1; ++i) {
+    dy[i] = dy[i - 2] + dy[i - 1]
+    console.log(dy[i])
+  }
+
+  return dy[n - 1]      //인덱스이므로 -1
+}
+
+export { solution2 as stairs }
