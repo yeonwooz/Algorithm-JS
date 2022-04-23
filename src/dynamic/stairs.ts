@@ -1,5 +1,6 @@
 /*
 <Dynamic Programming>
+동적계획법 : 점화식에서 a(n)을 이전 항과의 관계식으로 구하는 방법
 
 Q. Get the number of ways to go upstairs through 'n' stairs. 
 For each step you can go one or two stairs at once.
