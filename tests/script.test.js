@@ -137,12 +137,28 @@ test('binaryRecursion 를 테스트할 수 있다.', () => {
   expect(solution.binaryRecursion(11)).toBe(1011)
 })
 
-test('stairs 를 테스할 수  있다.', () => {
+test('stairs 를 테스트할 수  있다.', () => {
   expect(solution.stairs(4)).toBe(5)
   expect(solution.stairs(7)).toBe(21)
 })
 
-test('stoneBridge 를 테스할 수  있다.', () => {
+test('stoneBridge 를 테스트할 수  있다.', () => {
   expect(solution.stoneBridge(7)).toBe(81)
 })
 // https://www.inflearn.com/questions/518253 -> 질문중
+
+test('adjacencyMatrix 를 테스트할 수 있다', () => {
+  expect(
+    solution.adjacencyMatrix(5, 9, [
+      [1, 2],
+      [1, 3],
+      [1, 4],
+      [2, 1],
+      [2, 3],
+      [2, 5],
+      [3, 4],
+      [4, 2],
+      [4, 5],
+    ])
+  ).toBe(6)
+})

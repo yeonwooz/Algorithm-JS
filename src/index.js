@@ -27,6 +27,7 @@ import { recursion1, recursion2 } from './recursion/consoleRecursion'
 import { binaryRecursion } from './recursion/binaryRecursion'
 import { stairs } from './dynamic/stairs'
 import { stoneBridge } from './dynamic/stoneBridge'
+import { adjacencyMatrix } from './graph/adjacencyMatrix'
 
 export default {
   min,
@@ -59,4 +60,5 @@ export default {
   binaryRecursion,
   stairs,
   stoneBridge,
+  adjacencyMatrix,
 }
