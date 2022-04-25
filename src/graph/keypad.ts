@@ -62,10 +62,17 @@ function solution(numbers, hand) {
 
         if (lDistance === rDistance) {
           answer += handChar[hand]
+          if (hand === 'left') {
+            lastLb = numbers[i]
+          } else {
+            lastRb = numbers[i]
+          }
         } else if (lDistance < rDistance) {
           answer += handChar['left']
+          lastLb = numbers[i]
         } else {
           answer += handChar['right']
+          lastRb = numbers[i]
         }
       }
     }
