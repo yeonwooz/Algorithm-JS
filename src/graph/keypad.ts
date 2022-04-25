@@ -20,8 +20,8 @@ function solution(numbers, hand) {
   const handChar = { left: 'L', right: 'R' }
 
   let answer = ''
-  let lastLb
-  let lastRb
+  let lastLb = 10
+  let lastRb = 12
 
   for (let i = 0; i < numbers.length; ++i) {
     if (lbs.includes(numbers[i])) {
