@@ -162,3 +162,19 @@ test('adjacencyMatrix 를 테스트할 수 있다', () => {
     ])
   ).toBe(6)
 })
+
+test('adjacencyList 를 테스트할 수 있다', () => {
+  expect(
+    solution.adjacencyList(5, 9, [
+      [1, 2],
+      [1, 3],
+      [1, 4],
+      [2, 1],
+      [2, 3],
+      [2, 5],
+      [3, 4],
+      [4, 2],
+      [4, 5],
+    ])
+  ).toBe(6)
+})

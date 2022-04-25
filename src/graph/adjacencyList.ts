@@ -19,11 +19,21 @@ function solution(n: number, m: number, arr: number[][]): number {
     if (v === n) {
       answer++
     } else {
-      for (let i = 1; i < n; ++i) {
-          for ()
+      for (let i = 0; i < graph[v].length; ++i) {
+        // 이번차례의 노드에서 연결된 개수만큼 탐색
+        const nextNode = graph[v][i]
+        if (ch[nextNode] === 0) {
+          ch[nextNode] = 1
+          dfs(nextNode)
+          ch[nextNode] = 0
+        }
       }
     }
   }
+
+  ch[1] = 1
+  dfs(1)
+  return answer
 }
 
 export { solution as adjacencyList }
