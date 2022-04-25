@@ -7,21 +7,39 @@ m: count of edges
 */
 
 function solution(n: number, m: number, arr: number[][]): number {
-  const connections: number[][] = []
+  let answer = 0
+  const graph: number[][] = Array.from(Array(n + 1), () =>
+    Array.from(Array(n + 1).fill(0))
+  )
+  let ch = Array.from({ length: n + 1 }, () => 0)
 
-  for (let point of arr) {
-    const outer = point[0]
-    const inner = point[1]
-    connections[outer][inner] = 1
+  for (let [a, b] of arr) {
+    graph[a][b] = 1
   }
 
-  for (let i = 1; i < n+1; ++i) {
-      for (let j = 1; j < n+1; ++j) {
-          if (connections[i][j]) {
-              // ?????
-          }
+  let path: number[] = []
+  function dfs(v: number) {
+    if (v === n) {
+      console.log(path)
+
+      answer++
+    } else {
+      for (let i = 1; i < n + 1; ++i) {
+        if (graph[v][i] === 1 && ch[i] === 0 && v !== i) {
+          ch[i] = 1
+          path.push(i)
+          dfs(i)
+          ch[i] = 0
+          path.pop()
+        }
       }
+    }
   }
+
+  path.push(1)
+
+  dfs(1)
+  return answer
 }
 
 export { solution as adjacencyMatrix }
