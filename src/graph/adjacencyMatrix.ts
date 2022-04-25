@@ -12,6 +12,7 @@ function solution(n: number, m: number, arr: number[][]): number {
     Array.from(Array(n + 1).fill(0))
   )
   let ch = Array.from({ length: n + 1 }, () => 0)
+  // let ch = Array(n + 1).fill(0)
 
   for (let [a, b] of arr) {
     graph[a][b] = 1
