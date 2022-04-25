@@ -36,6 +36,7 @@ function solution(n: number, m: number, arr: number[][]): number {
     }
   }
 
+  ch[1] = 1
   path.push(1)
 
   dfs(1)
