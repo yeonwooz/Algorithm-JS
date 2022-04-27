@@ -5,7 +5,7 @@
 특정 V(vertex)에서 갈 수 있는 번호들의 리스트들의 배열 만들기 
 
 */
-function solution(n: number, m: number, arr: number[][]): number {
+function solution(n: number, arr: number[][]): number {
   let answer = 0
   // 다차원배열을 만들 때 new Array 또는 Array.from을 사용해야 새로운 메모리에 저장된다.
   const graph: number[][] = Array.from(Array(n + 1), () => new Array())
@@ -36,4 +36,42 @@ function solution(n: number, m: number, arr: number[][]): number {
   return answer
 }
 
-export { solution as adjacencyList }
+function solution2(n: number, arr: number[][]) {
+  // n이 5보다 크면 인접리스트의 배열을 만들어보자 (이 문제에서는 5지만)
+  let routes = 0
+
+  // 인접리스트배열
+  const listArray = Array.from(Array(n + 1), () => new Array())
+
+  for (let [a, b] of arr) {
+    listArray[a].push(b)
+  }
+
+  // 방문노드스택
+  const vStack: number[] = []
+
+  // 내부함수
+  function inner(v: number) {
+    if (v === n) {
+      routes++
+      vStack.pop()
+      return
+    }
+
+    for (let i = 0; i < listArray[v].length; ++i) {
+      const node = listArray[v][i]
+      if (!vStack?.includes(node)) {
+        vStack.push(node)
+        inner(node)
+        vStack.pop()
+      }
+    }
+  }
+
+  vStack.push(1)
+  inner(1)
+
+  return routes
+}
+
+export { solution2 as adjacencyList }

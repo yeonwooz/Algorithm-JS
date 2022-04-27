@@ -165,7 +165,7 @@ test('adjacencyMatrix 를 테스트할 수 있다', () => {
 
 test('adjacencyList 를 테스트할 수 있다', () => {
   expect(
-    solution.adjacencyList(5, 9, [
+    solution.adjacencyList(5, [
       [1, 2],
       [1, 3],
       [1, 4],
