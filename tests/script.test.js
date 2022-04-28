@@ -179,7 +179,5 @@ test('adjacencyList 를 테스트할 수 있다', () => {
 })
 
 test('bfsQueue 를 테스트할 수  있다.', () => {
-  expect(solution.bfsQueue(7, [[1], [2, 3], [4, 5], [6, 7]])).toEqual([
-    1, 2, 3, 4, 5, 6, 7,
-  ])
+  expect(solution.bfsQueue(7)).toBe('1 2 3 4 5 6 7')
 })

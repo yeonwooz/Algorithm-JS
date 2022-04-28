@@ -3,17 +3,24 @@
 Q. Implent breadth-first searching of the given graph.
 */
 
-function solution(n: number, arr: number[][]) {
+function solution(n: number) {
+  let answer = ''
   const queue = []
+  queue.push(1)
 
-  for (let i = 0; i < arr.length; ++i) {
-    for (let j = 0; j < arr[i].length; ++j) {
-      queue.push(arr[i][j])
+  while (queue.length) {
+    let v = queue.shift()
+    const lastSpace =  v === n ? '' : ' '
+    answer += v + lastSpace
+    for (let nv of [v * 2, v * 2 + 1]) {
+      if (nv > n) {
+        break
+      }
+      queue.push(nv)
     }
   }
 
-  console.log(queue)
-  return queue
+  return answer
 }
 
 export { solution as bfsQueue }
