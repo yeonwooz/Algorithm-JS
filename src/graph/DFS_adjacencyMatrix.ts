@@ -1,6 +1,5 @@
 /*
-< Graph - Adjacency Matrix > 
-
+<Depth-First search>
 n: count fo vertices
 arr: connections between each pair of edges
 */

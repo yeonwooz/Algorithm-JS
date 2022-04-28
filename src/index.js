@@ -27,9 +27,9 @@ import { recursion1, recursion2 } from './recursion/consoleRecursion'
 import { binaryRecursion } from './recursion/binaryRecursion'
 import { stairs } from './dynamic/stairs'
 import { stoneBridge } from './dynamic/stoneBridge'
-import { adjacencyMatrix } from './graph/adjacencyMatrix'
-import { adjacencyList} from './graph/adjacencyList'
-
+import { adjacencyMatrix } from './graph/DFS_adjacencyMatrix'
+import { adjacencyList } from './graph/DFS_adjacencyList'
+import { bfsQueue } from './graph/BFS'
 export default {
   min,
   isTriangle,
@@ -62,5 +62,6 @@ export default {
   stairs,
   stoneBridge,
   adjacencyMatrix,
-  adjacencyList
+  adjacencyList,
+  bfsQueue,
 }

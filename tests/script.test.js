@@ -1,4 +1,3 @@
-import { textChangeRangeIsUnchanged } from 'typescript'
 import solution from '../src/index'
 
 test('concatArrays 을 테스트할 수 있다', () => {
@@ -177,4 +176,10 @@ test('adjacencyList 를 테스트할 수 있다', () => {
       [4, 5],
     ])
   ).toBe(6)
+})
+
+test('bfsQueue 를 테스트할 수  있다.', () => {
+  expect(solution.bfsQueue(7, [[1], [2, 3], [4, 5], [6, 7]])).toEqual([
+    1, 2, 3, 4, 5, 6, 7,
+  ])
 })
