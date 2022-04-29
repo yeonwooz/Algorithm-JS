@@ -19,12 +19,7 @@ function solution(s) {
   let answer = s
 
   for (let i = 0; i < 10; ++i) {
-    let arr = answer.split(dicts[i])
-
-    if (arr.length > 1) {
-      console.log(i, dicts[i])
-      answer = answer.replace(dicts[i], i)
-    }
+    answer = answer.replace(dicts[i], i)
   }
 
   return parseInt(answer)
