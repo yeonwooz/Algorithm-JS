@@ -1,7 +1,3 @@
-/*
-2021 KAKAO BLIND
-*/
-
 function removeChars(arr) {
   // 비허용 문자 제거
   const reg = new RegExp(/^[a-z0-9-_.]+$/)
@@ -29,10 +25,12 @@ function solution(new_id) {
     }
   }
 
-  //4
+  //4 => if/else 쓰지 않도록 주의;;;
   if (answer[0] === '.') {
     answer.splice(0, 1)
-  } else if (answer[answer.length - 1] === '.') {
+  }
+
+  if (answer[answer.length - 1] === '.') {
     answer.splice(answer.length - 1, 1)
   }
 
