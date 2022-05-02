@@ -3,40 +3,50 @@
 */
 
 function solution(s) {
-  let firstRepeatIndex = -1
-  const firstLetterStack = []
-
+  let firstLetterIndex = 0
   let i = 0
   while (i < s.length) {
     if (s[i] === s[0]) {
-      firstRepeatIndex = i
-      firstLetterStack.push({ idx: i, value: s[i] })
+      firstLetterIndex = i
     }
     ++i
   }
 
-  if (firstLetterStack.length === 1) {
+  if (firstLetterIndex === 0) {
     return s.length
   }
 
-  firstRepeatIndex = firstLetterStack[1].idx
-  console.log(firstLetterStack)
+  // const arr = s.split('')
+  // indexOf, slice 사용해보기
 
-  const stackArray = Array.from(
-    Array(firstLetterStack.length),
-    () => new Array()
-  )
-  // console.log(stackArray)
-  for (let i = 0; i < firstLetterStack.length; ++i) {
-    for (let j = 0; j < firstLetterStack[1].idx; ++j) {
-      if (s[j] === s[j + firstLetterStack[i].idx]) {
-        stackArray[i].push(s[j + firstLetterStack[i].idx])
-      } else {
-        break
-      }
+  // for (let i = 0; i < s.length; ++i) {
+  //     let chunk = s.slice(1)
+  // }
+
+  let repeatLength = 0
+
+  function getChunk(length) {
+    if (length === 1) {
+      repeatLength = 1
+      return
+    }
+
+    const chunk = s.slice(0, length)
+    const fromOne = s.slice(chunk.length - 1)
+    const idx = fromOne.indexOf(chunk)
+
+    if (idx > 0) {
+      repeatLength = length
+      return
+    } else {
+      getChunk(length - 1)
     }
   }
-  // 막힌 부분: 반복되는 구간을 어떻게 자를 것인가?
 
-  console.log(stackArray)
+  getChunk(s.length)
+
+  console.log(repeatLength)
+
+  // return s.length - repeatLength + 1
+  // return
 }
