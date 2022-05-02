@@ -45,8 +45,29 @@ function solution(s) {
 
   getChunk(s.length)
 
-  console.log(repeatLength)
-
   // return s.length - repeatLength + 1
-  // return
+
+  const map = new Map()
+  let j = 0
+  while (j < s.length) {
+    if (s[j] === s[j + repeatLength]) {
+      const chunk = s.slice(j, j + repeatLength)
+      if (!map.has(chunk)) {
+        map.set(chunk, 2)
+      } else {
+        map.set(chunk, map.get(chunk) + 1)
+      }
+    }
+
+    j += repeatLength
+  }
+
+  let repeatedPartLength = 0
+  let compressedLength = 0
+  for (let [chunk, count] of map) {
+    repeatedPartLength += chunk.length * count
+    compressedLength += count.toString().length + chunk.length
+  }
+  const restLength = s.length - repeatedPartLength
+  return restLength + compressedLength
 }
