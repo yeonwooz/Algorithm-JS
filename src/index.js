@@ -30,6 +30,7 @@ import { stoneBridge } from './dynamic/stoneBridge'
 import { adjacencyMatrix } from './graph/DFS_adjacencyMatrix'
 import { adjacencyList } from './graph/DFS_adjacencyList'
 import { bfsQueue } from './graph/BFS'
+import { forLoop1 } from './warmup/forLoops'
 export default {
   min,
   isTriangle,
@@ -64,4 +65,5 @@ export default {
   adjacencyMatrix,
   adjacencyList,
   bfsQueue,
+  forLoop1,
 }

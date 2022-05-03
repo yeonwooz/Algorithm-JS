@@ -178,6 +178,14 @@ test('adjacencyList 를 테스트할 수 있다', () => {
   ).toBe(6)
 })
 
-test('bfsQueue 를 테스트할 수  있다.', () => {
+test('bfsQueue 를 테스트할 수 있다.', () => {
   expect(solution.bfsQueue(7)).toBe('1 2 3 4 5 6 7')
+})
+
+test('for loop1 을 테스트할 수 있다.', () => {
+  solution.forLoop1('aabbaccc')
+  // solution.forLoop1('ababcdcdababcdcd')
+  // solution.forLoop1('abcabcdede')
+  // solution.forLoop1('abcabcabcabcdededededede')
+  // solution.forLoop1('xababcdcdababcdcd')
 })
