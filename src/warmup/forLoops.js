@@ -29,4 +29,18 @@ function solution(s) {
   }
 }
 
+// resolving
+function solution(s) {
+  for (let i = 1; i < Math.floor(s.length / 2); ++i) {
+    // 8글자 -> 1,2,3,4
+    // 9글자 -> 1,2,3,4
+    for (let j = i; j < s.length - i + 1; ++j) {
+      // i = 1 이면 1칸씩 잘라서 탐색
+      // i = 2 이면 2칸씩 잘라서 탐색
+      const sample = s.substring(0, i) // 고정
+      const chunk = s.substring(j, j + i) // 자르면서 이동
+      console.log(sample, chunk)
+    }
+  }
+}
 export { solution as forLoop1 }
