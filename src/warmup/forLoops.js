@@ -31,25 +31,43 @@ function solution(s) {
 
 // resolving
 function solution(s) {
+  let answer = s.length
+
   for (let i = 1; i < Math.floor(s.length / 2); ++i) {
     // 8글자 -> 1,2,3,4
     // 9글자 -> 1,2,3,4
 
+    let str = ''
+    let tempstr = ''
+    let tempCnt = 1
+
+    // const sample = s.substring(0, i) // 고정
+
     for (let j = i; j < s.length; ++j) {
-      // i = 1 이면 1칸씩 잘라서 탐색  
-      // i = 2 이면 2칸씩 잘라서 탐색 
-      const prev = s.substring(j-i, j) // 자르면서 이동
-      const next = s.substring(j, j+i) // 자르면서 이동
+      // i = 1 이면 1칸씩 잘라서 탐색
+      // i = 2 이면 2칸씩 잘라서 탐색
+      const prev = s.substring(j - i, j) // 자르면서 이동
+      const next = s.substring(j, j + i) // 자르면서 이동
 
       if (prev === next) {
-          console.log(111, prev, next)
-          j += i  // 압축되었다면 다음 청크단위로 넘어가기
+        if (tempstr === prev) {
+          tempCnt += 1
+        } else {
+          tempCnt = 2
+        }
+        str += tempCnt + next
+        tempstr = prev
+        j += i
       } else {
-          console.log(222, next)
+        str += prev
+        tempCnt = 1
       }
 
-      
+      if (j === s.length - 1 && str.length < answer) {
+        answer = str.length
+      }
+    }
   }
-  }
+  return answer
 }
 export { solution as forLoop1 }
