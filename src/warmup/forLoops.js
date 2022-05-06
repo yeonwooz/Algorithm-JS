@@ -37,7 +37,10 @@ function solution(s) {
     let cnt = 1 // 압축 숫자 -> 1은 생략
     let tempstr = s.substring(0, i)
 
-    for (let startIdx = i; startIdx < s.length; ++startIdx) {
+    /*
+    시작점 startIdx 는 i칸만큼씩 커진다
+    */
+    for (let startIdx = i; startIdx < s.length; startIdx += i) {
       const nextstr = s.substring(startIdx, startIdx + i)
       if (tempstr === nextstr) {
         cnt += 1
