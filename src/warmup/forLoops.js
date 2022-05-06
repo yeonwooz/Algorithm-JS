@@ -32,42 +32,34 @@ function solution(s) {
 // resolving
 function solution(s) {
   let answer = s.length
-
-  for (let i = 1; i < Math.floor(s.length / 2); ++i) {
-    // 8글자 -> 1,2,3,4
-    // 9글자 -> 1,2,3,4
-
+  for (let i = 1; i <= Math.floor(s.length / 2); ++i) {
     let str = ''
-    let tempstr = ''
-    let tempCnt = 1
+    let cnt = 1 // 압축 숫자 -> 1은 생략
+    let tempstr = s.substring(0, i)
 
-    // const sample = s.substring(0, i) // 고정
-
-    for (let j = i; j < s.length; ++j) {
-      // i = 1 이면 1칸씩 잘라서 탐색
-      // i = 2 이면 2칸씩 잘라서 탐색
-      const prev = s.substring(j - i, j) // 자르면서 이동
-      const next = s.substring(j, j + i) // 자르면서 이동
-
-      if (prev === next) {
-        if (tempstr === prev) {
-          tempCnt += 1
-        } else {
-          tempCnt = 2
-        }
-        str += tempCnt + next
-        tempstr = prev
-        j += i
+    for (let startIdx = i; startIdx < s.length; ++startIdx) {
+      const nextstr = s.substring(startIdx, startIdx + i)
+      if (tempstr === nextstr) {
+        cnt += 1
       } else {
-        str += prev
-        tempCnt = 1
-      }
+        if (cnt === 1) {
+          str += tempstr // 압축되지 않은 문자 => 그냥 추가
+        } else {
+          str += cnt.toString() + tempstr // 압축되는 문자 => cnt와 함께 추가
+        }
 
-      if (j === s.length - 1 && str.length < answer) {
-        answer = str.length
+        cnt = 1
+        tempstr = nextstr
       }
     }
+    if (cnt === 1) {
+      str += tempstr
+    } else {
+      str += cnt.toString() + tempstr
+    }
+    answer = Math.min(answer, str.length)
   }
   return answer
 }
+
 export { solution as forLoop1 }
