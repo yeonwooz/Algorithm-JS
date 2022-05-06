@@ -15,13 +15,13 @@ function solution(s) {
     // i: 1, 2,  ... Math.floor(s.length/2)
     let str = ''
     let cnt = 1
-    let tempStr = s.substr(0, i)
+    let tempStr = s.substring(0, i)
     let idx = 0
 
     for (idx = i; idx <= s.length; idx++) {
       // ++ 랑 동일하게 동작함
 
-      let nextStr = s.substr(idx, i)
+      let nextStr = s.substring(idx, idx + i)
       console.log('Second Depth, idx=', idx, '/ nextStr=', nextStr)
 
       // ...
